@@ -46,9 +46,9 @@ $('#search-btn').on('click', () => {
             let imgText =response.results[i].artworkUrl100;
             let name =response.results[i].collectionName;
             let detail= response.results[i].collectionViewUrl
-            let imgMore = collectionViewUrl.indexOf
+            let imgUp = imgText.replace(/100x100bb/g,'600x600bb')
             $('#results').append(
-             Card({img:imgText,title:name,detail:detail})
+             Card({img:imgUp,title:name,detail:detail})
             );
     }
     }).fail((error) => {
@@ -56,5 +56,4 @@ $('#search-btn').on('click', () => {
     })
 })
 
-https://is3-ssl.mzstatic.com/image/thumb/Music20/v4/d4/6c/af/d46caf98-ff6c-1707-135d-58d6ed9ea6a2/source/100x100bb.jpg
 
