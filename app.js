@@ -1,5 +1,5 @@
 
-const Card = ({img,title,Detail}) =>`
+const Card = ({img,title,detail}) =>`
     
     <div class="col-4 mb-5">
 
@@ -10,7 +10,7 @@ const Card = ({img,title,Detail}) =>`
 
                 <h5 class="card-title">${title}</h5>
                 <p class="card-text"></p>
-                <a href = "${Detail}">
+                <a href = "${detail}">
                 <button type="button" class="article-btn">Detail</button></a>
             
             </div>
@@ -46,11 +46,15 @@ $('#search-btn').on('click', () => {
             let imgText =response.results[i].artworkUrl100;
             let name =response.results[i].collectionName;
             let detail= response.results[i].collectionViewUrl
-             $('#results').append(
-             Card({img:imgText,title:name,Detail:detail}));
-            }
+            let imgMore = collectionViewUrl.indexOf
+            $('#results').append(
+             Card({img:imgText,title:name,detail:detail})
+            );
+    }
     }).fail((error) => {
         console.log(error)
     })
 })
+
+https://is3-ssl.mzstatic.com/image/thumb/Music20/v4/d4/6c/af/d46caf98-ff6c-1707-135d-58d6ed9ea6a2/source/100x100bb.jpg
 
